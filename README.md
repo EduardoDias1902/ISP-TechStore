@@ -6,7 +6,6 @@ A TechStore possui um sistema de gerenciamento de clientes. Inicialmente foi cri
 
 Porém, essa interface possuía muitas responsabilidades e acabou causando problemas de design.
 
----
 
 ## Violação do ISP
 
@@ -16,7 +15,6 @@ Por exemplo, `ClienteComumService` precisava apenas cadastrar e buscar clientes,
 
 Isso viola o **Princípio da Segregação de Interfaces (ISP)**, que afirma que **uma classe não deve depender de métodos que não utiliza**.
 
----
 
 ## Solução (Refatoração)
 
@@ -28,7 +26,6 @@ Para resolver o problema, a interface grande foi dividida em interfaces menores:
 
 Assim, cada classe implementa apenas as interfaces necessárias.
 
----
 
 ## Implementação
 
@@ -38,7 +35,6 @@ Assim, cada classe implementa apenas as interfaces necessárias.
 - **ClienteVIPService**  
   Implementa `ICadastroCliente`, `INotificador` e `IGerenciadorFidelidade`.
 
----
 
 ## Benefícios
 
@@ -48,3 +44,4 @@ A refatoração trouxe melhorias como:
 - menor acoplamento  
 - classes mais simples  
 - facilidade de manutenção e expansão do sistema
+
